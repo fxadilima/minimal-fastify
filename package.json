@@ -1,0 +1,26 @@
+{
+  "name": "fresh-template",
+  "version": "1.0.0",
+  "description": "A fresh minimalist template to create clean app using fastify",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "fastify",
+    "handlebars",
+    "glitch",
+    "minimalist"
+  ],
+  "author": "Adi Lima",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/formbody": "^7.3.0",
+    "@fastify/static": "^6.5.0",
+    "@fastify/view": "^7.1.0",
+    "fastify": "^4.8.1",
+    "handlebars": "^4.7.7"
+  }
+}

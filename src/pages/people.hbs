@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal | {{title}}</title>
+        <link rel="stylesheet" href="/styles/w3.css" />
+    </head>
+    <body>
+        <div class="w3-content">
+            <h1>{{title}}</h1>
+            <p>
+                {{#if name}}
+                Displaying info for <strong>{{name}}</strong>
+                <ul>
+                    {{#each infoList}}
+                        <li>{{{info}}}</li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+            </p>
+            <div class="w3-panel">
+            {{#if gallery}}
+            <h3>Image</h3>
+            <p>
+                Image list dalam bentuk card menggunakan Handlebars.
+            </p>
+                {{{gallery.contents}}}
+            {{/if}}
+            </div>
+            <p>
+                <a href="/" class="w3-btn w3-black">Kembali ke Home</a>
+            </p>
+        </div>
+    </body>
+</html>

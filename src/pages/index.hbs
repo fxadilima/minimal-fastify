@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/styles/w3.css" />
+    </head>
+    <body>
+        <div class="w3-content">
+            <h1>{{message}}</h1>
+            <div class="w3-panel w3-pale-blue w3-card">
+                <p>
+                    Yang bisa diakses dari <strong>Handlebars</strong><br>
+                    Request ke server adalah:
+                </p>
+                <p>
+                    name: {{request.name}}<br/>
+                    page: {{request.page}}
+                </p>
+                <p>
+                    <a href="/people?name=adi" class="w3-btn w3-blue w3-hover-red">Akses ke People</a>
+                </p>
+            </div>
+            <div class="w3-container">
+                <h3>Hasil</h3>
+                <p>
+                    Sejauh ini kita mendapatkan hasil berikut.
+                </p>
+                <div class="w3-row-padding">
+                    <div class="w3-card-4 w3-col m4 l4">
+                        <img src="/images/hbs-each-1.jpg" alt="Handlebars Each">
+                    </div>
+                    <div class="w3-col m8 l8">
+                        <h3>Penggunaan Each Dalam Handlebars</h3>
+                        <p>
+                            Iterasi untuk <strong>each</strong> harus berupa object, atau hasilnya tidak akan seperti
+                            yang kita harapkan. Dan parameter yang diperlukan harus berupa array. Tes ini menggunakan
+                            <strong>QueryString</strong> yang diinput user melalui browser (atau melalui request dengan GET),
+                            dengan <em>key</em> "name". Untuk saat ini yang menimbulkan efek itu hanya kalau key tersebut nama
+                            saya (adi). Ini karena saya juga sedang mencoba keyword "if" dari Handlebars.
+                        </p>
+                        <p>
+                            Akan sangat menarik kalau isi list dari gambar tersebut adalah sebuah HTML block, misalnya,
+                            masing-masing adalah sebuah <code>card</code> berisi <em>image</em> berikut keterangannya.
+                        </p>
+                        <p>
+                            Tambahan lagi, kita dengan lebih leluasa bisa menyertakan skrip untuk client-side seperti contoh
+                            berikut:
+                            <p>
+                                <button type="button" class="w3-button w3-black w3-hover-blue" onclick="onTest1()" id="btn1">Test 1</button>
+                            </p>
+                            <div class="w3-container" id="msg"></div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <script src="/scripts/main.js"></script>
+    </body>
+</html>
